@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.5",
+        "stefangabos/zebra_pagination": "^2.4"
+    }
+}
