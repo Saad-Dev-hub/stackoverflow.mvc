@@ -53,7 +53,6 @@ class AbstractModel extends DatabaseHandler
     public static function getAll()
     {
         $sql = "SELECT * FROM ".static::$tableName;
-        // FORCE INPUT TO BE STRING NOT INT
         $stmt =DatabaseHandler::instance()->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, get_called_class(), array_keys(static::$tableSchema));

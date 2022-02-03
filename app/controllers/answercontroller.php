@@ -38,6 +38,9 @@ class AnswerController extends AbstractController
     $this->_data['myAnswer'] = $myAnswer;
     // delete the answer
     $myAnswer->delete();
-    header('location:/question/show/' . $myAnswer->question_id);
+    $prevPage = $_SERVER['HTTP_REFERER'];
+    header('location:' . $prevPage);
+   // header('location:/question/show/' . $myAnswer->question_id);
+
   }
 }

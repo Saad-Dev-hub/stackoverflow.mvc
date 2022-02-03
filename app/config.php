@@ -6,10 +6,10 @@ if(!defined('DS')){
 }
 define('APP_PATH',realpath(dirname(__FILE__)));
 define('VIEWS_PATH',APP_PATH.DS.'views'.DS);
+define("CSS_PATH", "assets/css");
+define("JS_PATH", "assets/js");
+define('UPLOAD_PATH',"uploads/");
 define('DATABASE_HOST_NAME','localhost');
 define('DATABASE_USER_NAME','root');
 define('DATABASE_PASSWORD','');
 define('DATABASE_NAME','stackoverflow');
-define("CSS_PATH", "assets/css");
-define("JS_PATH", "assets/js");
-define('UPLOAD_PATH',"uploads/");

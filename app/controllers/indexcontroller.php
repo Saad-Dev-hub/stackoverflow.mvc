@@ -104,13 +104,16 @@ GROUP BY `question`.`id`');
         $this->_data['answersForCurrentQuestion'] = $answersForCurrentQuestion;
         // var_dump($answersForCurrentQuestion);die;        
 
-        if (isset($_POST['submit'])) {
+        if (isset($_POST['submit'])) {       
             $body = $this->filterCodeSnippet($_POST['body'], 'Body');
             $question_id = $questionInformation[0]->id;
+            $this->_data['errors'] = $this->showErrors();
+           // var_dump($this->_data['errors']);
+            if(empty($this->showErrors())){
             $answer = new AnswerModel($question_id, $_SESSION['loggedUser']->id, $body);
-            //var_dump($answer);die;
             $answer->save();
             header('Location:/index/showQuestion/' . $question_id);
+            }
         }
         $this->_view();
     }

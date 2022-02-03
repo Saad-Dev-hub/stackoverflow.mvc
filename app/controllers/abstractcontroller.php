@@ -30,14 +30,12 @@ class AbstractController
     {
         if ($this->_action == FrontController::NOT_FOUND_ACTION) {
             require_once VIEWS_PATH . DS . 'notfound' . DS . 'notfound.view.php';
-        } else {
+        } else{
             $view = VIEWS_PATH . $this->_controller . DS . $this->_action . '.view.php';
             if (file_exists($view)) {
                 extract($this->_data);
                 require_once $view;
-            }           
+        }
         }
     }
-    
-    
 }

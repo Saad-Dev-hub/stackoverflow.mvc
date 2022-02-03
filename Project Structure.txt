@@ -1,0 +1,13 @@
+Description of stackoverflow Project (in short)
+
+1- This Project is about the stackoverflow website
+2- This Project is built in MVC Design Pattern
+3- Technologies used are:-
+*PHP 7.4
+*MYSQL => Using PDO Driver
+*SESSION => Using some Methods to Prevent Session Hijacking and Session Fixation
+*Front Controller Pattern 
+*.htaccess => To Prevent Directory Listing
+4-Used Libraries are:-
+*PHP Mailer
+*Zebra Pagination

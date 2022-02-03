@@ -42,6 +42,5 @@ class FrontController
         $controller->setAction($this->_action);
         $controller->setParams($this->_params);
         $controller->$actionName();
-       
     }
 }

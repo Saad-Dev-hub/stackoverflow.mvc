@@ -112,13 +112,6 @@ trait Validation
             if (!in_array($file_ext, $extensions)) {
                 $this->_errors_img[] = "extension not allowed, please choose a JPEG or PNG file.";
             }
-            // check if the file type is pdf  
-            // if ($file_type != 'image/jpeg' && $file_type != 'image/jpg' && $file_type != 'image/png') {
-            //     $this->_errors_img[] = "extension not allowed, please choose a JPEG or PNG file.";
-            // }
-
-
-            
             if ($file_size > 2097152) {
                 $this->_errors_img[] = 'File size must be less than 2 MB';
             }

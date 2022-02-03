@@ -129,9 +129,6 @@
         <div style="max-width: 808px;">
             <form method="POST">
                 <h2 class="ml-6">Your Answer</h2>
-                <div class="ml-6">
-                    <textarea class="form-control" name="body" id="body"></textarea>
-                </div>
                 <?php if (isset($errors) && count($errors) > 0) : ?>
                     <div>
                         <?php foreach ($errors as $error) : ?>
@@ -139,7 +136,9 @@
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
-
+                <div class="ml-6">
+                    <textarea class="form-control" name="body" id="body"></textarea>
+                </div>
                 <input class="btn btn-blue ripple ml-6" type="submit" value="Post Your Answer" name="submit">
             </form>
         </div>
